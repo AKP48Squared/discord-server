@@ -1,13 +1,10 @@
 'use strict';
-const ServerConnectorPlugin = require('../../lib/ServerConnectorPlugin');
 const Discordie = require('discordie');
 var c = require('irc-colors');
 
-class Discord extends ServerConnectorPlugin {
-  constructor(config, id, AKP48, persistentObjects) {
-    super('Discord', AKP48);
-    this._id = id;
-    this._config = config;
+class Discord extends global.AKP48.pluginTypes.ServerConnector {
+  constructor(AKP48, config, id, persistentObjects) {
+    super('Discord', AKP48, config, id);
     this._defaultCommandDelimiters = ['!', '.'];
     var self = this;
     if(!config || !config.token) {
