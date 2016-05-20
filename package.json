@@ -1,10 +1,12 @@
 {
   "name": "akp48-plugin-discord",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "Discord plugin for AKP48.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preversion": "git checkout master && git pull --ff-only",
+    "postversion": "git push origin master --tags && npm publish"
   },
   "author": "Austin Peterson <austin@akpwebdesign.com>",
   "license": "MIT",
