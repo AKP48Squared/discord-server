@@ -166,3 +166,4 @@ Discord.prototype.getPersistentObjects = function () {
 };
 
 module.exports = Discord;
+module.exports.type = 'ServerConnector';
